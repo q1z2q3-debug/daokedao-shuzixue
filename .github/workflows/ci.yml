@@ -1,0 +1,25 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 校验稿中命题（35 项）
+        run: python3 scripts/verify.py
+
+      - name: 主本与 docs 副本一致
+        run: |
+          cp "book/润泽说-道可道之数字学（整理稿）.md" /tmp/master.md
+          diff -q /tmp/master.md "docs/润泽说-道可道之数字学（整理稿）.md" \
+            || { echo "docs 副本与主本不一致，请运行 scripts/sync-docs.sh"; exit 1; }
