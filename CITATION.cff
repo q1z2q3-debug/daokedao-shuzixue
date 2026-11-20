@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: "润泽说 道可道之数字学——369 宇宙能量体系整理稿"
+message: "若引用本整理稿，请使用以下条目。"
+type: book
+authors:
+  - family-names: "乔"
+    given-names: "忠"
+    alias: "润泽"
+date-released: 2026-11-20
+version: "1.0.0"
+license: CC-BY-NC-SA-4.0
+abstract: >-
+  读《数字学》讲义的整理与复算：数字根、十二周期、九九乘法、
+  乘法次方与 DNA、三六九幻方、棋盘格、七/八/九、142857，
+  附五种思维范式与《道德经》《心经》对读；全部可验命题由脚本复跑。
